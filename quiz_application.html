@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Quiz Application</title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	</head>
+	<body>
+		<div id="completionProgressDiv">
+			Quiz Completion Progress: 
+			<progress id="completionProgress" max="5" value="0"></progress>
+		</div>
+		<img src="" id="questionImage" height="420" width="420">
+		<form name="form1">
+			<h1 id='quizQuestion' ></h1>
+			<div class="container">
+				<p class="choice" >
+					<input type="radio" name="answerChoice" value="A" id="aChoice" />
+					<label id="aLabel"></label>
+				</p>
+				<span> </span>
+				<p class="choice" >
+					<input type="radio" name="answerChoice" value="B" id="bChoice" />
+					<label id="bLabel"></label>
+				</p>
+				<p class="choice" >
+					<input type="radio" name="answerChoice" value="C" id="cChoice" />
+					<label id="cLabel"></label>
+				</p>
+				<p class="choice" >
+					<input type="radio" name="answerChoice" value="D" id="dChoice" />
+					<label id="dLabel"></label>
+				</p>
+			</div>
+			<p>
+			<input type="button" name="nextButton" value="Next" class="btn" />
+			</p>
+			<input type="button" name="tryAgainButton" value="Try Again?" class="tryAgain" />
+		</form>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="quizScript.js"></script> 
+	</body>
+</html>
