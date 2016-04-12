@@ -1,7 +1,7 @@
-$JavaScript-Quiz-Application
+JavaScript-Quiz-Application
 =============================
 
-$JavaScript-Quiz-Application is a quiz game that can be easily updated with 
+JavaScript-Quiz-Application is a quiz game that can be easily updated with 
 new questions and new pictures.
 
 The questions come from the well known gameshow "Who wants to be a Millionaire".
