@@ -3,20 +3,21 @@ var main = function() {
 	//// Define Variables
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	// We initialize a variable that tracks the question number.
-	var questionNumber = 1;
 	// An array of objects that hold all the question information.
 	var allQuestions = [
 		{	question: "1) Who is Prime Minister of the United Kingdom?", correctAnswer: "A", image: "http://www.visit-britain.co.uk/assets/images/britain-map-photo.JPG",
 			options: ["A) David Cameron", "B) Gordon Brown", "C) Winston Churchill", "D) Tony Blair"], choice: ""},
 		{	question: "2) In the children's book series, where is Paddington Bear originally from?", correctAnswer: "B", image: "http://www.yottoy.com/images/large/toy/paddingtonbear.jpg",
 			options: ["A) India", "B) Peru", "C) Canada", "D) Iceland"], choice: ""},
-		{	question: "3) \"Nephelococcygia\" is the practice of donig what?",	correctAnswer: "A", image: "http://granitegrok.com/wp-content/uploads/2013/07/Question-Mark.jpg",
+		{	question: "3) \"Nephelococcygia\" is the practice of doing what?",	correctAnswer: "A", image: "http://granitegrok.com/wp-content/uploads/2013/07/Question-Mark.jpg",
 			options: ["A) Finding shapes in clouds", "B) Sleeping with your eyes open", "C) Breaking glass with your voice", "D) Swimming in freezing water"], choice: ""},
 		{	question: "4) Which insect shorted out an early supercomputer and inspired the term \"computer bug\"?", correctAnswer: "A", image: "http://www.peimag.com/wp-content/uploads/2015/05/supercomputers.jpg",
 			options: ["A) Moth","B) Roach","C) Fly","D) Japanese beetle"], choice: ""},
 		{	question: "5) Which of the following men does not have a chemical element named for him?",	correctAnswer: "C", image: "http://www.ptable.com/Images/periodic%20table.png",
 			options: ["A) Albert Einstein", "B) Niels Bohr", "C) Isaac Newton", "D) Enrico Fermi"], choice: ""}];
+	
+	// We initialize a variable that tracks the question number.
+	var questionNumber = 1;
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//// Initialize UI
@@ -80,17 +81,16 @@ var main = function() {
 				numberRight++;
 			}
 		} 
-		scoringMessage = "Thank you for taking the quiz!  You got " + numberRight + " out of 5 correct!"
+		
 		$('#questionImage').hide();
 		$('.choice').hide();
 		$('.btn').hide();
-		if (numberRight != 5)
+		if (numberRight != allQuestions.length) {
+			scoringMessage = "Thank you for taking the quiz!  You got " + numberRight + " out of " + allQuestions.length + " correct!";
 			$('.tryAgain').show();
+		}
 		else {
-			var pElement = document.createElement("p");
-			var text = document.createTextNode("Congratulations on getting all five right!!");
-			pElement.appendChild(text);
-			document.body.appendChild(pElement);
+			scoringMessage = "Thank you for taking the quiz!  You got " + numberRight + " out of " + allQuestions.length + " correct!  Congratulations!";
 		}
 		document.getElementById("quizQuestion").innerHTML=scoringMessage;
 	};
@@ -113,14 +113,14 @@ var main = function() {
 	// hasCheckedABox(), storeAnswerChoiceAndUncheck(), displayNewQuestions(), and displayScoringMessage().
 	var buttonClickEvent = function() {
 		if (hasCheckedABox() == true) {
-			if (questionNumber < 5) {
+			if (questionNumber < allQuestions.length) {
 				document.getElementById("completionProgress").value++
 				storeAnswerChoiceAndUncheck(questionNumber);
 				questionNumber++;
 				displayNewQuestions(questionNumber);
 				
 			} else { //Finished with all questions
-				document.getElementById("completionProgress").value = 5;
+				document.getElementById("completionProgress").value = allQuestions.length;
 				storeAnswerChoiceAndUncheck(questionNumber);
 				displayScoringMessage()
 				//put scoring here
