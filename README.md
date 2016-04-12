@@ -7,6 +7,7 @@ new questions and new pictures.
 The questions come from the well known game show "Who wants to be a Millionaire", but feel free to update the existing questions or add new ones.  
 
 To add new questions:
+----------------------
 
 1. Open the document "quizScript.js"
 
