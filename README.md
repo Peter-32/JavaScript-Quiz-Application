@@ -20,8 +20,8 @@ each block of curly brackets.  Then you can update the text content to create ne
 
 Additional information
 -----------------------
-1. The quiz will work for one question or many questions
+1. The quiz will work for one question or many questions.
 
-2. Each question can only have one answer
+2. Each question can only have one correct answer.
 
-3. Each question requires four choices of answers
+3. Each question requires four choices of answers.
