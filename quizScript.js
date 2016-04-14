@@ -5,7 +5,7 @@ var main = function() {
 	
 	// An array of objects that hold all the question information.
 	var allQuestions = [
-		{	question: "1) Who is Prime Minister of the United Kingdom?", correctAnswer: "A", image: "http://www.visit-britain.co.uk/assets/images/britain-map-photo.JPG",
+		{	question: "1) Who is Prime Minister of the United Kingdom?", correctAnswer: "A", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Union_flag_1606_(Kings_Colors).svg/2000px-Union_flag_1606_(Kings_Colors).svg.png",
 			options: ["A) David Cameron", "B) Gordon Brown", "C) Winston Churchill", "D) Tony Blair"], choice: ""},
 		{	question: "2) In the children's book series, where is Paddington Bear originally from?", correctAnswer: "B", image: "http://www.yottoy.com/images/large/toy/paddingtonbear.jpg",
 			options: ["A) India", "B) Peru", "C) Canada", "D) Iceland"], choice: ""},
