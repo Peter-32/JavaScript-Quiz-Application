@@ -114,7 +114,7 @@ var main = function() {
 	var buttonClickEvent = function() {
 		if (hasCheckedABox() == true) {
 			if (questionNumber < allQuestions.length) {
-				document.getElementById("completionProgress").value++
+				document.getElementById("completionProgress").value++;
 				storeAnswerChoiceAndUncheck(questionNumber);
 				questionNumber++;
 				displayNewQuestions(questionNumber);
