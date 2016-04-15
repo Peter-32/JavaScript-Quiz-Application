@@ -1,10 +1,7 @@
 Quiz-Application
 =============================
 
-Quiz-Application is a quiz game that can be easily updated with 
-new questions and new pictures.
-
-The questions come from the well known game show "Who wants to be a Millionaire", but feel free to update the existing questions or add new ones.  
+Quiz-Application is a quiz game that shows five questions from the game show "Who wants to be a Millionaire", and can be also be updated with new questions and new pictures.
 
 To add new questions:
 ----------------------
