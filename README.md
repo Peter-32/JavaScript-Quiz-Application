@@ -1,7 +1,10 @@
 Quiz Application
 =============================
 
-Quiz-Application is a quiz game that shows five questions from the game show "Who wants to be a Millionaire", and can be also be updated with new questions and new pictures.
+Quiz-Application is JavaScript quiz game that shows five questions from the game show "Who wants to be a Millionaire", and can be also be updated with new questions and new pictures.
+
+This is a link to my Code Pen profile:
+https://codepen.io/peterm/
 
 [Screenshot](/quiz.png?raw=true)
 
